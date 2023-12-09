@@ -4,6 +4,7 @@ const vm =Vue.createApp({
             test: 1,
             first_name: 'hamid',
             last_name: 'reza',
+            text_title: "http://google.com"
         }
     },
     methods : {
@@ -14,4 +15,6 @@ const vm =Vue.createApp({
             return `${this.first_name} ${this.last_name}`
         }
     }
-}).mount('#app1')
+}).mount('#app1');
+
+
