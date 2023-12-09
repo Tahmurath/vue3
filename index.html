@@ -1,0 +1,22 @@
+<script src="vue.global.js"></script>
+
+<div id="app1" @click>
+    <button @click="calc()">{{ test }}</button>
+{{ test }}
+
+</div>
+
+<script>
+    const vm =Vue.createApp({
+        data() {
+            return {
+                test: 1
+            }
+        },
+        methods : {
+            calc() {
+                this.test++
+            }
+        }
+    }).mount('#app1')
+</script>
