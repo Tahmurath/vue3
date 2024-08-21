@@ -12,7 +12,12 @@ const vm =Vue.createApp({
             this.test++
         },
         full_name() {
-            return `${this.first_name} ${this.last_name}`
+            return `${this.first_name} ${this.last_name.toUpperCase()}`
+        },
+        updateLastName (msg, event) {
+            
+            console.info(msg)
+            this.last_name = event.target.value
         }
     }
 }).mount('#app1');
