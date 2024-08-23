@@ -8,29 +8,29 @@
 </head>
 
 <style type="text/css">
-[v-cloak] {
-    /* display: none; */
-    /* background-color: brown !important; */
-}
+
 </style>
 
 <body>
 
     <div id="app1" v-cloak>
         <button @click="calc()">{{ test }}</button>
-        {{ first_name }}
+        {{ first_name }} 
         {{ last_name }}
+        {{ typeof age }}
         <br>
         {{ `${first_name} and ${last_name.toUpperCase()}` }}
         <br>
-        {{ full_name() }}
+        {{ full_name }}
     
         <input type="text" :value="last_name" @input.stop="updateLastName('the msg', $event)" >
         <br>
-        <input type="text" v-model="test" :title="text_title">
+        <input type="number" v-model="test" :title="text_title">
         <input type="text" :placeHolder="text_title">
-        <input type="text" v-model="first_name">
+        <input type="text" v-model.lazy.trim="first_name">
         <input type="text" v-model="last_name">
+        
+        <input type="text" v-model.number="age">
     </div>
 
     <script src="vue.global.js"></script>
